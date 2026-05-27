@@ -1,0 +1,40 @@
+# MNIST experiment configuration
+dataset: mnist
+data_dir: ./data
+results_dir: ./results
+
+model:
+  arch: small
+  num_classes: 10
+  dropout: 0.25
+
+phase1:
+  epochs: 3
+  batch_size: 128
+  lr: 0.01
+
+phase2:
+  epochs: 10
+  batch_size: 128
+  eps: 0.30             # larger eps for MNIST (1-channel)
+  alpha: 0.075
+  pgd_steps: 7
+  lr: 0.01
+  weight_decay: 0.0005
+  use_dp: true
+  noise_mult: 1.1
+  max_grad_norm: 1.0
+
+phase4:
+  sigma: 0.12
+  cert_samples: 100
+  n_smooth_pred: 100
+  n_smooth_cert: 300
+  alpha: 0.001
+  sanitizer:
+    use_median: true
+    use_bilateral: true
+    use_squeeze: true
+    use_spatial: false
+    median_kernel: 3
+    squeeze_bits: 5

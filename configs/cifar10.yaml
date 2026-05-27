@@ -1,0 +1,40 @@
+# CIFAR-10 experiment configuration
+dataset: cifar10
+data_dir: ./data
+results_dir: ./results
+
+model:
+  arch: robust          # SmallCNN | robust (RobustCNN)
+  num_classes: 10
+  dropout: 0.1
+
+phase1:
+  epochs: 5
+  batch_size: 64
+  lr: 0.01
+
+phase2:
+  epochs: 20
+  batch_size: 64
+  eps: 0.03137          # 8/255
+  alpha: 0.00784        # 2/255
+  pgd_steps: 7
+  lr: 0.01
+  weight_decay: 0.0005
+  use_dp: true
+  noise_mult: 1.1       # DP-SGD noise multiplier σ  (DPA metric)
+  max_grad_norm: 1.0    # DP-SGD clipping norm C       (DPA metric)
+
+phase4:
+  sigma: 0.25           # Randomized Smoothing noise level
+  cert_samples: 200
+  n_smooth_pred: 100
+  n_smooth_cert: 300
+  alpha: 0.001
+  sanitizer:
+    use_median: true
+    use_bilateral: true
+    use_squeeze: true
+    use_spatial: false
+    median_kernel: 3
+    squeeze_bits: 5
