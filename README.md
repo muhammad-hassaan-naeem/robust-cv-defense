@@ -2,7 +2,7 @@
 
 # 🛡️ Robust Computer Vision — Adversarial Defense Pipeline
 
-**Zarka Yousaf** · Cybersecurity & Machine Learning · May 2026
+**Muhammad Hassaan Naeem** · Cybersecurity & Machine Learning · May 2026
 
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://python.org)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org)
@@ -10,7 +10,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Tests](https://img.shields.io/badge/tests-52%20passing-brightgreen)](tests/)
 
-*Full implementation of the research proposal:*
 **"Integrating Differential Privacy and Adaptive Denoising for Adversarial Defense in Safety-Critical Systems"**
 
 </div>
@@ -210,9 +209,9 @@ pytest tests/ -v
 @misc{yousaf2026robust,
   title   = {Robust Computer Vision: Integrating Differential Privacy
              and Adaptive Denoising for Adversarial Defense},
-  author  = {Yousaf, Zarka},
+  author  = {Naeem, Muhammad Hassaan},
   year    = {2026},
-  url     = {https://github.com/zarka-yousaf/robust-cv-defense}
+  url     = {https://github.com/muhammad-hassaan-naeem/robust-cv-defense}
 }
 ```
 
